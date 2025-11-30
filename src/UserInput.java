@@ -1,3 +1,4 @@
+import javax.xml.transform.Source;
 import java.util.Scanner;
 public class UserInput {
     public static void  main(String[] args){
@@ -15,18 +16,28 @@ public class UserInput {
          .nextDouble() /// For Double Data type
          */
         Scanner userInput = new Scanner(System.in);
-        System.out.println("What is your name?");
+        System.out.print("What is your name?");
+        //String
         String name = userInput.nextLine();
-        System.out.println("What is your age?");
+        System.out.print("What is your age?");
+        //Int
         int age = userInput.nextInt();
-        System.out.println("What is your GPA?");
+        System.out.print("What is your GPA?");
+        //Double
         double GPA = userInput.nextDouble();
+        //Boolean
+        System.out.print("Are you a Student? (true/false)");
+        boolean isStudent = userInput.nextBoolean();
         if (age == 18){
             System.out.println("Hello "+ name + " You are eligible for the offer!!");
         }else {
             System.out.println("Hello "+ name + ", Thank your for participating but you are not eligible!! Better luck next time");
         }
         System.out.println("Your GPA is "+ GPA);
+        if (isStudent){
+            System.out.println("You are a student");
+        }
 
+        userInput.close();
     }
 }
