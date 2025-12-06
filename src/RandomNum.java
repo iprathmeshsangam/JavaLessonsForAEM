@@ -3,10 +3,18 @@ import java.util.Random;
 public class RandomNum {
 
     public static void main(String[] args){
-        System.out.print("This is RandomNum generation - ");
+//        System.out.print("This is RandomNum generation - ");
 
-        Random random = new Random();
+       Random random = new Random();
 
-        System.out.println(random.nextInt(1,50));
+      boolean isHead;
+
+      isHead = random.nextBoolean();
+
+      if (isHead){
+          System.out.println("Heads");
+      }else {
+          System.out.println("Tails");
+      }
     }
 }
